@@ -55,4 +55,10 @@ document.addEventListener('DOMContentLoaded', function () {
         // Optional: Remove controls for now, they will be added when the video is played
         video.removeAttribute('controls');
     });
+    
+    // Automatically trigger click event on each video to start playback after the event listeners are defined
+    videos.forEach(function (video) {
+        video.click();
+    });
+    
 });
