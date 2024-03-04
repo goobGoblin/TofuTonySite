@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
         videos.forEach(video => {
             if (isElementInViewport(video)) {
                 video.play();
+                video.muted = false;
             } else {
                 video.pause();
             }
