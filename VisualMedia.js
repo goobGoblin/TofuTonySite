@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const videos = document.querySelectorAll('video');
     const videoContainer = document.querySelector('.video-container');
+    const PlayAll = document.getElementById('PlayAll');
     let currentVideo = null; // Initially set to null
 
     // Function to check if an element is in the viewport
@@ -26,13 +27,13 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Autoplay the first video on page load
-    if (videos.length > 0) {
-      videos[3].play();
-      videos[2].play();
-      videos[1].play();
-      videos[0].play();
+    // Autoplay the videos when user clicks the PlayAll Button
+    function playAllVideos() {
+        videos.forEach(video => {
+            video.play();
+        });
     }
+
     
 
     videos.forEach(function (video) {
@@ -86,6 +87,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Optional: Remove controls for now, they will be added when the video is played
         video.removeAttribute('controls');
+
+        // Add event listener to the autoplay button
+        PlayAll.addEventListener('click', playAllVideos);
 
         // Autoplay the video currently in the viewport on page load
         autoplayVisibleVideo();
