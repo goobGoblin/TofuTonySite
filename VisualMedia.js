@@ -20,9 +20,11 @@ document.addEventListener('DOMContentLoaded', function () {
         videos.forEach(video => {
             if (isElementInViewport(video)) {
                 video.play();
+                video.classList.add('active');
                 video.muted = false;
             } else {
                 video.pause();
+                video.classList.remove('active');
             }
         });
     }
@@ -31,10 +33,14 @@ document.addEventListener('DOMContentLoaded', function () {
     function playAllVideos() {
         videos.forEach(video => {
             video.play();
+            if (index === 0) {
+               video.classList.add('active');
+           } else {
+               video.classList.remove('active');
+           }
         });
+        // Make sure the first video is currently active
     }
-
-
 
     videos.forEach(function (video) {
         video.addEventListener('click', () => {
@@ -85,17 +91,24 @@ document.addEventListener('DOMContentLoaded', function () {
             this.setAttribute('poster', posterData);
         });
 
+
         // Optional: Remove controls for now, they will be added when the video is played
         video.removeAttribute('controls');
 
         // Add event listener to the autoplay button
         PlayAll.addEventListener('click', playAllVideos);
 
+        // Check for the video in the viewport on scroll
+        window.addEventListener('scroll', autoplayVisibleVideo);
+
         // Autoplay the video currently in the viewport on page load
         autoplayVisibleVideo();
 
-        // Check for the video in the viewport on scroll
-        window.addEventListener('scroll', autoplayVisibleVideo);
+        // Play the currently active video
+        if (activeVideo) {
+            activeVideo.play();
+        }
+
     });
 
 
