@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function playAllVideos() {
         videos.forEach(video => {
             video.play();
+            video.add.classList.add('active');
             if (index === 0) {
                video.classList.add('active');
            } else {
