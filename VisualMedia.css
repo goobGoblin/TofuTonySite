@@ -3,6 +3,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #000; /* Change background color to black */
     color: #fff; /* Change text color to white */
+    margin-bottom: 100px;
 }
 
 h1 {
@@ -11,6 +12,16 @@ h1 {
     font-family: 'Orbitron', sans-serif;
 }
 
+#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+
 .video-container {
     position: relative;
     width: 100%;
@@ -18,6 +29,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 200px; /* Add a bottom margin of 100 pixels */
 }
 
 .video-container video {

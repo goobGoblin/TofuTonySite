@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const videos = document.querySelectorAll('video');
+    const videos = document.querySelectorAll('video:not(#background-video)');
     const videoContainer = document.querySelector('.video-container');
     const PlayAll = document.getElementById('PlayAll');
     let currentVideo = findActiveVideo(); // Initially set to null
@@ -8,6 +8,10 @@ document.addEventListener('DOMContentLoaded', function () {
      function findActiveVideo() {
          for (let i = 0; i < videos.length; i++) {
              if (videos[i].classList.contains('active')) {
+                 if (i == 0) {
+                   videos[i].classList.add('background');
+                   videos[i].classList.remove('active');
+                 }
                  return videos[i];
              }
          }
@@ -32,8 +36,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 video.classList.add('active');
                 video.muted = false;
             } else {
-                video.pause();
                 video.classList.remove('active');
+                video.pause();
             }
         });
     }
