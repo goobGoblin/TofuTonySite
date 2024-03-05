@@ -60,9 +60,12 @@ document.addEventListener('DOMContentLoaded', function () {
         if (video.paused) {
             video.play();
             video.classList.add('active');
+            video.setAttribute('controls', ''); // Show controls when video is played
         } else {
             video.pause();
             video.classList.remove('active');
+            video.removeAttribute('controls'); // Hide controls when video is paused
+
         }
     }
 
