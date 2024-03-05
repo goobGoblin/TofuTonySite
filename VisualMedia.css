@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 body {
     margin: 0;
-    font-family: 'Orbitron';
+    font-family: 'Orbitron', 'OCR A Std', monospace;
     background-color: #000; /* Change background color to black */
     color: #fff; /* Change text color to white */
     margin-bottom: 100px;
@@ -13,12 +13,12 @@ body {
 h1 {
     text-align: center;
     margin-top: 20px;
-    font-family: 'Orbitron';
+    font-family: 'Orbitron', 'OCR A Std', monospace;
 }
 
 h4 {
   text-align: center;
-  font-family: 'Orbitron';
+  font-family: 'Orbitron', 'OCR A Std', monospace;
   font-size: 10;
   color: red;
 }
