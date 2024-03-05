@@ -4,19 +4,27 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; media-src https://storage.googleapis.com/tofu_tony_site_assets_main/Videos/;
-                                                                         img-src 'self' data:;">
+                                                                         img-src 'self' data:;
+                                                                         font-src 'self' https://fonts.gstatic.com;
+                                                                         style-src-elem 'self' https://fonts.gstatic.com;">
 <title>Visual Media</title>
 <link rel="stylesheet" type="text/css" href="VisualMedia.css">
 </head>
 <body>
-<h1>Visual Media</h1>
+<div class ='header-bg'>
+  <h1>Visual Media</h1>
+  <h4>If you are on mobile you may need to tap each video before it will play</h4>
+</div>
 
 <video id="background-video" autoplay muted loop>
     <source src="https://storage.googleapis.com/tofu_tony_site_assets_main/Videos/SiteBG1.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video>
-
-<button id="PlayAll">Click here to display media</button>
+<div class="button-section">
+  <div class="button-container">
+    <button id="PlayAll">Click here to display media</button>
+  </div>
+</div>
 
 <div class="video-list">
     <div class="video-item">

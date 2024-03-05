@@ -1,15 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Orbitron', sans-serif;
     background-color: #000; /* Change background color to black */
     color: #fff; /* Change text color to white */
     margin-bottom: 100px;
+    display: block;
+
+    justify-content: center;
 }
 
 h1 {
     text-align: center;
     margin-top: 20px;
     font-family: 'Orbitron', sans-serif;
+}
+
+h4 {
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 10;
+  color: red;
+}
+
+.header-bg {
+  background-color: rgba(0, 0, 0, 0.7); /* Black background with 70% opacity */
+  width: 100%; /* Full width of the page */
+  padding: 1px; /* Adjust padding as needed */
+}
+
+.button-section {
+    background-color: rgba(0, 0, 0, 0.6); /* Black background with 60% opacity */
+    width: 100%; /* Take up the width of the page */
+    padding: 5px; /* Add padding for better spacing */
+    align-items: center;
+    justify-content: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2vh; /* Adjust the height as needed */
+}
+
+
+
+.button-section button {
+  align-content: center;
+  align-self: center;
+  color: white;
+  background-color: black;
+  font-family: 'Orbitron';
 }
 
 #background-video {
