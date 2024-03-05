@@ -1,4 +1,10 @@
 
+@font-face {
+  font-family: 'Orbitron';
+  src: url('Fonts\Orbitron\orbitron-medium-webfont.woff') format('woff'),
+       url('TofuTonySite\Fonts\Orbitron\orbitron-medium-webfont.ttf') format('truetype');
+}
+
 body {
     margin: 0;
     font-family: 'Orbitron', 'OCR A Std', monospace;
@@ -8,14 +14,6 @@ body {
     display: block;
 
     justify-content: center;
-}
-
-
-.orbitron-main {
-  font-family: "Orbitron", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
 }
 
 h1 {
