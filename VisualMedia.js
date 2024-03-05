@@ -60,12 +60,20 @@ document.addEventListener('DOMContentLoaded', function () {
         if (video.paused) {
             video.play();
             video.classList.add('active');
-            video.setAttribute('controls', ''); // Show controls when video is played
+            toggleControls(video, true);
         } else {
             video.pause();
             video.classList.remove('active');
-            video.removeAttribute('controls'); // Hide controls when video is paused
+            toggleControls(video, false);
+        }
+    }
 
+    // Function to toggle controls based on video's active state
+    function toggleControls(video, isActive) {
+        if (isActive) {
+            video.setAttribute('controls', ''); // Show controls for active video
+        } else {
+            video.removeAttribute('controls'); // Hide controls for inactive video
         }
     }
 
@@ -76,6 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 currentVideo.pause(); // Pause the currently playing video
                 video.classList.add('active');
                 currentVideo.classList.remove('active');
+                toggleControls(currentVideo, false);
             }
             currentVideo = video; // Set the currentVideo to the clicked video
             // Set the background color of the video container to match the current video
@@ -99,10 +108,10 @@ document.addEventListener('DOMContentLoaded', function () {
         // Autoplay the video currently in the viewport on page load
         autoplayVisibleVideo();
 
-        // Play the currently active video
-        if (currentVideo) {
-            currentVideo.play();
-        }
+        // // Play the currently active video
+        // if (currentVideo) {
+        //     currentVideo.play();
+        // }
 
     });
 
