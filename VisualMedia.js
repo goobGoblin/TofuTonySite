@@ -96,6 +96,9 @@ document.addEventListener('DOMContentLoaded', function () {
             e.preventDefault();
         });
 
+        document.getElementById('SoundcloudLink').addEventListener('click', function() {
+          window.location.href = 'https://on.soundcloud.com/zrZ1T';
+        });
         // Optional: Remove controls for now, they will be added when the video is played
         video.removeAttribute('controls');
 

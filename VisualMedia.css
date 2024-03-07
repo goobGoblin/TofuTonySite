@@ -29,6 +29,10 @@ h4 {
   color: red;
 }
 
+button {
+  margin: 0 10px; /* Adds space to the left and right of each button */
+}
+
 .header-bg {
   background-color: rgba(0, 0, 0, 0.7); /* Black background with 70% opacity */
   width: 100%; /* Full width of the page */
